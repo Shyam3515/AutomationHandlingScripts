@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SelIntro {
@@ -17,6 +18,11 @@ public class SelIntro {
         //So it will directly invoke the chrome driver and that chrome driver will be ultimately responsible to invoke your browser and from there things will go on.
 		System.setProperty("webdriver.chrome.driver","/Users/shyam/Documents/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		//first window
+		driver.get("https://www.google.com/");
+		
+		driver.switchTo().newWindow(WindowType.WINDOW);//opens new window with new url;
+		//second window
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());

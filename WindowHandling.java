@@ -30,6 +30,8 @@ public class WindowHandling {
 		//clicking on link which moves to another window
 		driver.findElement(By.xpath("//div[@class='overlay-panel overlay-right']/button[@class='ghost']")).click();
 		
+		//=> Open a new window/tab  => driver.get(“https://example.com”); driver.switchTo().newWindow(WindowType.WINDOW);
+		
 		Set<String> windowIds =driver.getWindowHandles();
 		
 		
